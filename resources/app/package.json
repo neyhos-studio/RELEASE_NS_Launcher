@@ -1,7 +1,7 @@
 {
   "name": "launcher",
   "productName": "NS Launcher",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Launcher du projet MMO",
   "main": "src/index.js",
   "scripts": {
