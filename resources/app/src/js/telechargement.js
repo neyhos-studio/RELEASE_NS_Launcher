@@ -25,10 +25,9 @@ git.check(path, function (err, result) {
   })
 
 document.getElementById('launchBtn').onclick = function(event){
-
+/*
     const repo = "https://github.com/neyhos-studio/RELEASE_NS_Launcher.git";
     const targetPath = "./";
-/*
     if(isGit(process.cwd())){
         pull(targetPath, function (err, consoleOutput) {
             if (err) {
