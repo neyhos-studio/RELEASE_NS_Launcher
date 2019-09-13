@@ -1,7 +1,7 @@
 {
   "name": "launcher",
   "productName": "NS Launcher",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Launcher du projet MMO",
   "main": "src/index.js",
   "scripts": {
@@ -19,25 +19,35 @@
   "license": "MIT",
   "config": {},
   "dependencies": {
+    "child_process": "^1.0.2",
+    "decompress-zip": "^0.2.2",
     "delete": "^1.1.0",
     "electron-progressbar": "^1.2.0",
     "electron-squirrel-startup": "^1.0.0",
     "file-saver": "^2.0.2",
+    "git-clone": "^0.1.0",
+    "git-clone-repo": "^1.0.0",
+    "git-pull": "^0.1.0",
+    "git-pull-or-clone": "^2.0.0",
+    "is-git-check": "^1.1.0",
     "make-dir": "^3.0.0",
     "mkdirp": "^0.5.1",
     "mssql": "^5.1.0",
+    "node-unzip-2": "^0.2.8",
+    "node-zip": "^1.1.1",
+    "npm-git-install": "^0.3.0",
     "path": "^0.12.7",
     "request": "^2.88.0",
     "tcp-ping": "^0.1.1",
-    "unzip-stream": "^0.3.0",
     "update-electron-app": "^1.5.0"
   },
-  "prodDependencies": {
+  "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.45",
     "@electron-forge/maker-deb": "^6.0.0-beta.45",
     "@electron-forge/maker-rpm": "^6.0.0-beta.45",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.45",
     "@electron-forge/maker-zip": "^6.0.0-beta.45",
-    "electron": "6.0.7"
+    "electron": "6.0.7",
+    "electron-packager": "^8.1.0"
   }
 }

@@ -382,6 +382,7 @@
     width: 0%;
     height: 100%;
     border-radius: 5px;
+    display: none;
 }
 .Progress-Nfo{
     width: 100%;
@@ -429,8 +430,6 @@
     height: 21px;
     text-align: center;
 }
-
-
 
 .Launcher-Right{
     text-align: center;

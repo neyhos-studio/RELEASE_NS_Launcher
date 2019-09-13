@@ -1,15 +1,38 @@
 var request = require('request');
 var fs = require('fs');
-const makeDir = require('make-dir');
-
-var unzip = require('unzip-stream')
 var del = require('delete');
 
-document.getElementById('launchBtn').onclick = function(event){
-    (async () => {
-        const folder = await makeDir('./launcherDL');
+var DecompressZip = require('decompress-zip');
 
+var clone = require('git-clone');
+var pull = require('git-pull');
+
+const isGit = require('is-git-check');
+
+document.getElementById('launchBtn').onclick = function(event){
+
+    const repo = "https://github.com/neyhos-studio/RELEASE_NS_Launcher.git";
+    const targetPath = "./prod";
+
+    console.log(isGit(process.cwd()))
+
+    /*clone(repo, targetPath, ()=>{
+    
+        console.log("ok")
+    
+    });*/
+
+    /*pull(targetPath, function (err, consoleOutput) {
+        if (err) {
+            console.error("Error!", err, consoleOutput);
+        } else {
+            console.log("Success!", consoleOutput);
+        }
+    });*/
+    
+    /*
         file_url = "http://51.91.156.75/LauncherTest/ns_launcher.zip";
+        //name_file = "ns_launcher.exe";
         name_file = "ns_launcher.zip";
         // Save variable to know progress
         var received_bytes = 0;
@@ -23,8 +46,6 @@ document.getElementById('launchBtn').onclick = function(event){
     
         var out = fs.createWriteStream(name_file);
         req.pipe(out);
-
-        
     
         req.on('response', function ( data ) {
             // Change the total bytes value to get progress later.
@@ -38,23 +59,57 @@ document.getElementById('launchBtn').onclick = function(event){
             showProgress(received_bytes, total_bytes);
         });
     
-        req.on('end', function() {
-            fs.createReadStream('ns_launcher.zip').pipe(unzip.Extract({ path: './'+folder+'' }));
+        req.on('end', function() {   
 
-            del.sync(['./'+ name_file+'']);
-            document.getElementById('launchBtn').textContent = "JOUER"
+            //fs.createReadStream(name_file).pipe(unzip.Extract({ path: './prod' }));0
+/*
+            var unzipper = new DecompressZip("C:\\Users\\Le boss\\Documents\\Projet MMO\\Launcher\\ns_launcher.zip")
+
+            unzipper.on('error', function (err) {
+                console.log('Caught an error');
+            });
+             
+            unzipper.on('extract', function (log) {
+                console.log('Finished extracting');
+            });
+             
+            unzipper.on('progress', function (fileIndex, fileCount) {
+                document.getElementById('test').textContent = 'Extracted file ' + (fileIndex + 1) + ' of ' + fileCount
+            });
+             
+            unzipper.extract({
+                path: 'C:\\Users\\Le boss\\Documents\\Projet MMO\\Launcher\\prod',
+            });
+            
+            new Notification('NS Launcher', {
+                body: "JEU installé !"
+              })
+
+            //DON'T TOUCH BIATCH
+            /*child('start C:\\"Program Files"\\Git\\git-bash.exe', function(error, data) {
+                if(error) {
+                console.error(error);
+                return;
+                }
+                console.log(data.toString());
+                });
+
+                //del.sync(['./'+ name_file+'']);
+
+                
+
+                
+                document.getElementById('launchBtn').textContent = "JOUER"
         });
     
     
     function showProgress(received,total){
         var percentage = (received * 100) / total;
+        document.getElementById('progressBar').style.display = "block";
         document.getElementById('progressBar').style.width = ""+percentage.toFixed(0)+"%";
-        document.getElementById('pourcentageDl').textContent = percentage.toFixed(0)
+        document.getElementById('pourcentageDl').textContent = percentage.toFixed(0) + " %"
 
         //| " + received + " bytes out of " + total + " bytes."
-    }
-    })();
+    }*/
 }
-
-
 
