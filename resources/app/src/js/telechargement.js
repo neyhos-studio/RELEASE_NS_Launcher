@@ -12,7 +12,7 @@ const isGit = require('is-git-check');
 document.getElementById('launchBtn').onclick = function(event){
 
     const repo = "https://github.com/neyhos-studio/RELEASE_NS_Launcher.git";
-    const targetPath = "./prod";
+    const targetPath = "./";
 
     console.log("Launcher à mettre à jour : " + isGit(process.cwd()))
 
