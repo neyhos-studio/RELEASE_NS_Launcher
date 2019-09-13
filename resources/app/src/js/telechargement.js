@@ -9,12 +9,12 @@ var pull = require('git-pull');
 
 const isGit = require('is-git-check');
 
+console.log("Launcher à mettre à jour : " + isGit(process.cwd()))
+
 document.getElementById('launchBtn').onclick = function(event){
 
     const repo = "https://github.com/neyhos-studio/RELEASE_NS_Launcher.git";
     const targetPath = "./";
-
-    console.log("Launcher à mettre à jour : " + isGit(process.cwd()))
 
     if(isGit(process.cwd())){
         pull(targetPath, function (err, consoleOutput) {
