@@ -14,7 +14,18 @@ document.getElementById('launchBtn').onclick = function(event){
     const repo = "https://github.com/neyhos-studio/RELEASE_NS_Launcher.git";
     const targetPath = "./prod";
 
-    console.log(isGit(process.cwd()))
+    console.log("Launcher à mettre à jour : " + isGit(process.cwd()))
+
+    if(isGit(process.cwd())){
+        pull(targetPath, function (err, consoleOutput) {
+            if (err) {
+                console.error("Error!", err, consoleOutput);
+            } else {
+                console.log("Success!", consoleOutput);
+                remote.app.relaunch();
+                remote.app.exit(0);
+            }
+    })}
 
     /*clone(repo, targetPath, ()=>{
     

@@ -1,7 +1,7 @@
 {
   "name": "launcher",
   "productName": "NS Launcher",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Launcher du projet MMO",
   "main": "src/index.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "decompress-zip": "^0.2.2",
     "delete": "^1.1.0",
     "electron-progressbar": "^1.2.0",
+    "electron-shutdown-command": "0.0.8",
     "electron-squirrel-startup": "^1.0.0",
     "file-saver": "^2.0.2",
     "git-clone": "^0.1.0",
