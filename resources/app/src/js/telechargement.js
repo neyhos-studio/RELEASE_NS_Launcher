@@ -9,13 +9,26 @@ var pull = require('git-pull');
 
 const isGit = require('is-git-check');
 
+var git = require('git-state')
+
+var path = process.cwd();
+
+console.log("Est-ce un GIT repository : " + isGit(process.cwd()))
+
+git.check(path, function (err, result) {
+    if (err) throw err
+    console.log(result) // => { branch: 'master',
+                        //      ahead: 0,
+                        //      dirty: 9,
+                        //      untracked: 1,
+                        //      stashes: 0 }
+  })
+
 document.getElementById('launchBtn').onclick = function(event){
 
     const repo = "https://github.com/neyhos-studio/RELEASE_NS_Launcher.git";
     const targetPath = "./";
-
-    console.log("Launcher à mettre à jour : " + isGit(process.cwd()))
-
+/*
     if(isGit(process.cwd())){
         pull(targetPath, function (err, consoleOutput) {
             if (err) {
@@ -25,7 +38,7 @@ document.getElementById('launchBtn').onclick = function(event){
                 remote.app.relaunch();
                 remote.app.exit(0);
             }
-    })}
+    })}*/
 
     /*clone(repo, targetPath, ()=>{
     
