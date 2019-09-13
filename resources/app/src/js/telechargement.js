@@ -9,6 +9,7 @@ var pull = require('git-pull');
 
 const isGit = require('is-git-check');
 
+console.log(process.cwd())
 console.log("Launcher à mettre à jour : " + isGit(process.cwd()))
 
 document.getElementById('launchBtn').onclick = function(event){
