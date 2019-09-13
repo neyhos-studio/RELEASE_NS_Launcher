@@ -1,0 +1,464 @@
+/* Components */
+.Launcher{
+    background: linear-gradient(2600deg,#153060, #156090);
+    /*background-image: url("./assets/wp4146207-rpg-wallpapers.jpg");
+     background: linear-gradient(2600deg,#092052, #004d80); */
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    -webkit-user-select: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Navigation */
+.Navigation{
+    background: rgba(255, 255, 255, 0.10);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    width: 100%;
+    height: 65px;
+    display: flex;
+}
+.Nav-Logo{
+    width: 75px;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+}
+.Logo{
+    width: 40px;
+    height: 40px;
+}
+.Nav-Bar{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+}
+.Nav-Btn{
+    height: 100%;
+    padding: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.Nav-Btn:hover{
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255,255,255,0.10);
+    border-right: 1px solid rgba(255,255,255,0.10);
+    padding-left: 14px;
+    padding-right: 14px;    
+    height: 100%;
+    border-bottom: 3px solid rgb(0, 162, 255);
+}
+.Nav-Btn-Txt{
+    margin-top: 18px;
+    vertical-align: middle;
+    font-weight: bold;
+    padding: 5px;
+    padding-top: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.Nav-Right{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.Nav-Profil{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+}
+.Profil-Btn{
+    background: rgba(220,220,220,1);
+    width: 40px;
+    height: 40px;
+    border-radius: 25px; 
+    float: right;
+    margin-top:8px; 
+}
+.Profil-Img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px; 
+}
+.Profil-Img:hover{
+    border: 3px solid rgba(255,255,255,0.30);
+    margin-top: -3px;
+    margin-left: -3px;
+    margin-bottom: -3px;
+}
+.Icon-List{
+    background: rgba(0,0,0,0.75);
+    border: 2px solid rgba(0,0,0,0.5);
+    display: none;
+    position: fixed;
+    margin-top: 20px;
+    margin-left: -70px;
+    width: 178px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+.icon-item{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px; 
+}
+.icon-item:Hover{
+    width: 34px;
+    height: 34px;
+    border: 3px solid rgba(210,30,0,1);
+}
+
+
+
+
+.User-Online{
+    border: 3px solid rgba(60,210,0,1);
+}
+.User-Abs{
+    border: 3px solid rgba(210,150,0,1);
+}
+.User-Busy{
+    border: 3px solid rgba(210,30,0,1);
+}
+.User-Offline{
+    border: 3px solid rgba(150,150,150,1);
+}
+
+.Nickname{
+    flex:1;
+    text-align: right;
+    line-height: 40px;
+    padding: 10px;
+    font-weight: bold;    
+}
+.Nickname-Btn{
+    background: none;
+    border: none;
+    padding: 5px;   
+    color: white;
+    text-align: right;   
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.Nickname-Btn:hover{
+    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(220,220,220,0.10));
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.Nickname-Btn::placeholder { 
+    color: white;
+    font-size: 18px; 
+    text-transform: uppercase;   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.Nickname-Btn:focus { 
+    outline: none;     
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.Nav-Window{
+    float: right;
+    width: fit-content;
+    height: 100%;
+}
+.Win-Btn{
+    float: right;
+    text-align: center;        
+    width: 25px;
+    border-radius: 3px; 
+}
+.Win-Btn:hover{
+    background: rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.33)
+}
+
+
+
+
+
+
+
+/* Content */
+.Main-Content{
+    background: none;
+    width: 100%;
+    height: calc(100% - 65px);
+    display: flex;
+}
+
+/* Game Selector */
+.Game-Selector{
+    background: rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
+    width: 75px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Game-Btn{
+    width: 100%;
+    height: 84px;
+    text-align: center;
+    vertical-align: middle;
+}
+.Game-Btn:hover{
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    margin-top: -1px;   
+}
+.Version{
+    height: 100%;
+    bottom: 0px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+}
+.Bottom{
+    width: 100%;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.Spacer{
+    width: 100%;
+    height: 100%;
+}
+
+.Game-Page{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.Game-Title{
+    width: 100%;
+    height: 73px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.Title-Form{
+    line-height: 75px;
+    margin-left: 25px;
+    font-weight: bold;
+}
+.Game-News{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.Main-News{
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    width: 400px;
+    height:	225px;
+}
+.Sub-News{
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    width: 200px;
+    height:	225px;
+    margin-left: 25px;
+}
+
+.Game-Launcher{
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    height: 125px;
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+}
+.Launcher-Left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.Server-Selection{
+    padding: 5px;
+    margin-top: -10px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+.Server-Btn{
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.5);
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.Server-Btn:hover{    
+    background: rgba(210,30,0,1);
+}
+.server-name{
+    flex:1;
+}
+.server-ping{
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    margin-top: 6px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.Server-List{
+    position: absolute;    
+    background: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0.2));
+    border-left: 5px solid rgba(220,220,220);
+    width: 170px;
+    margin-left: -10px;    
+    margin-top: -186px;
+    display: none;
+    border-radius: 2px;
+}
+.serv-item{
+    width: 100%;
+    padding: 10px;
+    /* background: rgba(210,30,0,1); */
+}
+.serv-item:hover{    
+    background: rgba(210,30,0,1);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius:  50px; 
+}
+
+
+.Online{
+    background: rgba(60,210,0,1);
+}
+.Abs{
+    background: rgba(210,150,0,1);
+}
+.Busy{
+    background: rgba(210,30,0,1);
+}
+.Offline{
+    background: rgba(150,150,150,1);
+}
+
+.Download-Section{
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom:0px;
+    padding-right: 0px;
+}
+.Download-Bar{
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+}
+.Progress-Bar{
+    background: rgba(255, 255, 255);
+    border: 2px solid rgba(0, 0, 0);
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+}
+.Progress-Nfo{
+    width: 100%;
+    height: 25px;
+    color: white;    
+}
+.Download-Mbps{
+    margin-top: 2px;
+    font-size: 14px;
+    margin-left: 10px; 
+}
+.Download-Percent{
+    margin-top: 2px;
+    font-size: 14px;
+    float: right;
+    margin-right: 5px; 
+}
+
+
+.Launcher-Center{
+    text-align: center;
+    padding-left: 5px; 
+    padding-right: 30px; 
+    display: flex;
+    flex-direction: row;
+}
+.btn-dwn{
+    border-radius: 5px;
+    width: 21px;
+    height: 21px;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+.btn-dwn:hover{
+    background: rgba(210,30,0,1);
+}
+.center-btn-txt{
+    position: absolute;
+    line-height: 16px;
+    vertical-align: middle;
+    margin-left: -10px;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+}
+
+
+
+.Launcher-Right{
+    text-align: center;
+    padding-left: 30px; 
+    padding-right: 30px; 
+}
+.Launch-Button{
+    border-radius: 10px;
+    width: fit-content;
+    padding: 15px;
+    margin-top: 12px;
+    
+    text-align: center;
+    font-weight: bold;
+    background: rgba(0,0,0,0.75);
+    border: 2px solid rgba(0,0,0,0.5);
+    color: white;
+}
+
+/* hover */
+.h-red:hover{
+    background: rgba(255, 0, 0, 0.66);
+}
+
+#Serveur-Off{
+    color: rgba(255, 0, 0);
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    display: none;
+}

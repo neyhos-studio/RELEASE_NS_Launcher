@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Launcher</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Kit Font Awesom -->
+    <script src="https://kit.fontawesome.com/a7d3cd123a.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <div class="Launcher">
+
+        <!-- Navigation -->
+        <div class="Navigation">
+
+            <!-- Nav Logo -->
+            <div class="Nav-Logo">
+                <img class="Logo" src="./assets/NS.png" alt="NEYHOS|Studio">
+            </div>
+
+            <!-- Nav Bar -->
+            <div class="Nav-Bar">
+
+                <div class="Nav-Btn">
+                    <div class="Nav-Btn-Txt" id="btnJeu">JEUX</div>
+                </div>
+
+                <div class="Nav-Btn">
+                    <div class="Nav-Btn-Txt" id="btnSocial">SOCIAL</div>
+                </div>
+
+                <div class="Nav-Btn">
+                    <div class="Nav-Btn-Txt" id="btnBoutique">BOUTIQUE</div>
+                </div>
+
+                <div class="Nav-Btn">
+                    <div class="Nav-Btn-Txt" id="btnActualites">ACTUALITÉS</div>
+                </div>
+
+            </div>
+
+            <!-- Nav Right -->
+            <div class="Nav-Right">
+
+                <div class="Nav-Profil">                    
+                    <div class="Nickname">
+                        <input type="text" id="my-nickname" class="Nickname-Btn" placeholder="NICKNAME" maxlength="16">
+                    </div>
+                    <div class="Profil-Btn User-Busy" id="profil-btn-seletion" onclick="displayIconSeletion()">
+                        <img class="Profil-Img" id="profil-img" src="./assets/LOGO_MAINTENANCE.png">
+                        <!-- User-Online/User-Abs/User-Busy/User-Offline -->
+                        <div class="Icon-List" id="Icon-List">
+                            <img class="icon-item" src="./assets/NS.png">
+                            <img class="icon-item" src="./assets/NS_MMO.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                            <img class="icon-item" src="./assets/LOGO_MAINTENANCE.png">
+                        </div>  
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Nav-Window -->
+            <div class="Nav-Window">
+                <div class="Win-Btn h-red" id="closeApp">+</div>
+                <div class="Win-Btn" id="maximizeApp">-</div>
+                <div class="Win-Btn" id="minimizeApp">-</div>
+            </div>
+
+        </div>
+
+        <!-- Content -->
+        <div class="Main-Content" > 
+
+            <!-- Game Selector -->
+            <div class="Game-Selector">
+                <div class="Game-Btn">
+                    <img class="Logo" src="./assets/NS_MMO.png" alt="">
+                </div>
+
+                <div class="Version">
+                    <a class="Spacer"></a>
+                    <a class="Bottom" id="numVersion"></a>
+                </div>
+            </div>
+
+            <!-- Panneau JEU -->
+            <div class="Game-Page" id="ongletJeu">
+
+                <!-- Game Title -->
+                <div class="Game-Title">
+                    <a class="Title-Form">
+                        NS_MMO
+                    </a>
+                </div>
+
+                <!-- Game News -->
+                <div class="Game-News" id="Game-News">
+                        <div id="Serveur-Off">API déconnectée</div>
+                    <div class="Main-News" id="Main-News">
+                        <iframe id="urlVideo" width="100%" height="100%" frameborder="0"></iframe>
+                    </div>
+                    <div class="Sub-News" id="Sub-News1" style="color: black"></div>
+                    <div class="Sub-News" id="Sub-News2" style="color: black"></div>
+                </div>
+
+                <!-- Game Launcher -->
+                <div class="Game-Launcher">
+                    <div class="Launcher-Left">
+                        <div class="Server-Selection">
+                            <div class="Server-Btn" id="server-btn" onclick="displayServerSeletion()">
+                                <span class="server-name">EUROPE</span>
+                                <div class="server-ping" id="Server-Ping"></div>    
+                                <!-- Server list  -->
+                                <div class="Server-List" id="Server-List">
+                                    <div class="serv-item">EUROPE</div>
+                                    <div class="serv-item">RUSSIA</div>
+                                    <div class="serv-item">ASIA</div>
+                                    <div class="serv-item">AMERICA</div>
+                                </div>                           
+                            </div>
+                        </div>
+                        <div class="Download-Section">
+                            <div class="Download-Bar">
+                                <div class="Progress-Bar" id="progressBar"></div>
+                            </div>
+                            <div class="Progress-Nfo"> 
+                                <a class="Download-Mbps">
+                                    <i>25.3 Mbps</i>
+                                </a>
+                                <a class="Download-Percent">
+                                    <i><span id="pourcentageDl" %></span> %</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Launcher-Center">
+                        <div class="btn-dwn"><a class="center-btn-txt">+</a></div>
+                        <div class="btn-dwn"><a class="center-btn-txt">=</a></div>
+                        <div class="btn-dwn"><a class="center-btn-txt">-</a></div>
+                    </div>
+
+                    <div class="Launcher-Right">
+                        <button class="Launch-Button" id="launchBtn">
+                            INSTALLER
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Panneau SOCIAL -->
+            <div class="Game-Page" id="ongletSocial">
+
+                    <!-- Game Title -->
+                    <div class="Game-Title">
+                        <a class="Title-Form">
+                            Social
+                        </a>
+                    </div>
+    
+                    <!-- Game News -->
+                    <div class="Game-News" id="Game-News">
+                           azeazeazeaze
+                    </div>
+    
+            </div>
+
+            <!-- Panneau BOUTIQUE -->
+            <div class="Game-Page" id="ongletBoutique">
+
+                    <!-- Game Title -->
+                    <div class="Game-Title">
+                        <a class="Title-Form">
+                            Boutique
+                        </a>
+                    </div>
+    
+                    <!-- Game News -->
+                    <div class="Game-News" id="Game-News">
+                           azeazeazeaze
+                    </div>
+    
+            </div>
+
+            <!-- Panneau ACTUALITES -->
+            <div class="Game-Page" id="ongletActus">
+
+                    <!-- Game Title -->
+                    <div class="Game-Title">
+                        <a class="Title-Form">
+                            Actualités
+                        </a>
+                    </div>
+    
+                    <!-- Game News -->
+                    <div class="Game-News" id="Game-News">
+                           azeazeazeaze
+                    </div>
+    
+            </div>
+
+        </div>
+
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/telechargement.js"></script>
+</body>
+</html>
