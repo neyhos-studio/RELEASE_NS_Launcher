@@ -13,16 +13,11 @@ var git = require('git-state')
 
 var path = process.cwd();
 
-console.log("Est-ce un GIT repository : " + isGit(process.cwd()))
+var gitDiff = require('git-diff')
+var assert = require('assert')
 
-git.check(path, function (err, result) {
-    if (err) throw err
-    console.log(result) // => { branch: 'master',
-                        //      ahead: 0,
-                        //      dirty: 9,
-                        //      untracked: 1,
-                        //      stashes: 0 }
-  })
+console.log("Est-ce un GIT repository : " + isGit(process.cwd()))
+console.log("Différence ou non ? " + assert.equal(diff, '@{upstream}'))
 
 document.getElementById('launchBtn').onclick = function(event){
 /*
